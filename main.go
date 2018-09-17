@@ -62,7 +62,7 @@ func main() {
 
 
 	// create router
-	router := mux.NewRouter().StrictSlash(true)
+	router := mux.NewRouter().StrictSlash(false)
 
 	router.HandleFunc("/rules/{action}/{chain}/{proto}/{iface_in}/{iface_out}/{source}/{destination}/", add_rules).Methods("PUT")
 	router.HandleFunc("/rules/{action}/{chain}/{proto}/{iface_in}/{iface_out}/{source}/{destination}/", del_rules).Methods("DELETE")
